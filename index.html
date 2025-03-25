@@ -42,6 +42,18 @@
                 A haas is a hare in Dutch, making it a proper acronym for a project trying to accelerate astrochemistry.
 
 
+                <p style="font-size: 18px; font-weight: bold; margin-top: 20px;">Machine Learning Surrogates for Cosmological N-body Simulations</p><hr>
+                <picture>
+                    <source srcset="../images/eridan_orion_lievre.jpg" type="image/jpeg">
+                    <img src="../images/eridan_orion_lievre.jpg", style="width: 50%; height: auto; float: right;" alt="Image description">
+                </picture>
+
+                The large-scale structure of the universe is shaped by the gravitational evolution of dark matter, forming a vast cosmic web of filaments, voids, galaxy clusters, and halos. Cosmological N-body simulations play a crucial role in analyzing large-scale galaxy surveys collected from telescopes by providing predictions for the clustering of dark matter and galaxies. However, running these simulations requires intensive computational resources, limiting the number of model configurations that can be explored. As a result, they struggle to keep pace with the growing volume of observed data.
+
+                In this work, we investigate the use of score-based generative machine learning models to learn the distribution of dark matter across different cosmological parameter configurations. Our approach uses a graph neural network with message-passing layers to capture meaningful topological features in dark matter halos represented as point clouds. To train the network, we add varying levels of random noise to the data and learn to predict the score, which points in the direction of increasing data density. During sampling, we begin from a uniform prior distribution that lacks structure and iteratively refine the data using Langevin Dynamics to recover the dark matter distribution.
+
+                Two notable challenges of this project are the large sizes of the point clouds and the domain-specific constraints. Since point clouds contain up to 600,000 points, directly processing them is memory demanding. To address this, we construct subgraphs that reduce the memory demand while preserving local structure of the data. Additionally, because periodic boundary conditions affect how distances and neighborhoods are computed and therefore how points move, we integrate them at every stage of the model pipeline, including k-NN computation, data perturbation, and inference, ensuring consistency with the data properties.
+
 
             </p>
             
