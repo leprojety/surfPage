@@ -1,76 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PROJET.y">
-    <title>projet.y</title>
-    <link rel="stylesheet" href="../css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PROJET.y" />
+  <title>projet.y</title>
+  <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h2><a href="../index.html"><img src="../images/P.Y_Logo_noir.png" alt="Texte alternatif" width="200"></a></h2>
-            <nav>
-                <ul>
-                    <!--<li><a href="../index.html">Home</a></li> -->
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../projects.html">Collaborations</a></li>
-                    <li><a href="../seminars.html">Seminars</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                </ul>
-            </nav>
+  <header>
+    <div class="container">
+      <h2>
+        <a href="../index.html">
+          <img src="../images/P.Y_Logo_noir.png" alt="Texte alternatif" width="200" />
+        </a>
+      </h2>
+      <nav>
+        <ul>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../projects.html">Collaborations</a></li>
+          <li><a href="../seminars.html">Seminars</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>AI For Science</h2>
+
+      <!-- Block 1: HAAS Project -->
+      <div class="block session">
+        <div class="text-content">
+          <p class="session-title">NeuralODEs for Computational Astrochemistry: The HAAS Project</p>
+          <p>In recent years, astrochemistry has seen remarkable advancements driven by cutting-edge telescopes like ALMA and JWST... However, simulating these intricate environments presents a significant challenge due to the computational demands of integrating both hydrodynamics (physics) and astrochemical models (chemistry).</p>
+
+          <p>The Hydrodynamical Astrochemical Autochemulators for Simulations (HAAS) project uses Neural Ordinary Differential Equations (NeuralODEs) to emulate astrochemical simulations... HAAS aims to investigate and benchmark fast and robust emulators for 3D simulations.</p>
+
+          <p>The project is a collaborative effort between the astrochemistry and machine learning communities... By integrating these models into hydrodynamical simulations, HAAS aspires to enable high-resolution studies that deepen our understanding of chemistry in space.</p>
+
+          <p>A <em>haas</em> is a hare in Dutch — a fitting acronym for a project that aims to accelerate astrochemistry.</p>
         </div>
-    </header>
-
-    <main>
-        <div class="container">
-            <h2>AI For Science</h2>
-            <p>
-            
-                <p style="font-size: 18px; font-weight: bold; margin-top: 20px;">NeuralODEs for Computational Astrochemistry: The HAAS Project</p><hr>
-                <picture>
-                    <source srcset="../images/eridan_orion_lievre.jpg" type="image/jpeg">
-                    <img src="../images/eridan_orion_lievre.jpg", style="width: 35%; height: auto; float: right;" alt="Image description">
-                </picture>
-                In recent years, astrochemistry has seen remarkable advancements driven by cutting-edge telescopes like ALMA and JWST, which have enabled the detection of increasingly complex molecules in protoplanetary disks, molecular clouds, and other galaxies. These observations underscore the importance of understanding the chemical processes that occur in these regions. However, simulating these intricate environments presents a significant challenge due to the computational demands of integrating both hydrodynamics (physics) and astrochemical models (chemistry).
-                <br><br>
-                To address this challenge, the Hydrodynamical Astrochemical Autochemulators for Simulations (HAAS) project uses Neural Ordinary Differential Equations (NeuralODEs) to emulate (surrogate modeling) astrochemical simulations. Novel datasets of this project include simulation results of the photodissociation region (PDR) in the Orion Bar. HAAS aims to investigate and benchmark fast and robust emulators that can be included as preconditioners of classical codes or full emulators into 3D simulations.
-                <br><br>
-                The project is aims to be a collaborative effort between the astrochemistry and machine learning communities, with a focus on developing a comprehensive library of ML models tailored to astrochemical emulation. By integrating these models into hydrodynamical simulations, HAAS aspires to enable high-resolution studies that could shed light on the origins of life and deepen our understanding of chemistry in space.
-                <br><br>
-                A haas is a hare in Dutch, making it a proper acronym for a project trying to accelerate astrochemistry.
-
-                <br>
-                <p style="font-size: 18px; font-weight: bold; margin-top: 20px;">Machine Learning Surrogates for Cosmological N-body Simulations</p><hr>
-                <picture>
-                    <source srcset="../images/sky.jpg" type="image/jpeg">
-                    <img src="../images/sky.jpg", style="width: 35%; height: auto; float: right;" alt="Image description">
-                </picture>
-
-                The large-scale structure of the universe is shaped by the gravitational evolution of dark matter, forming a vast cosmic web of filaments, voids, galaxy clusters, and halos. Cosmological N-body simulations play a crucial role in analyzing large-scale galaxy surveys collected from telescopes by providing predictions for the clustering of dark matter and galaxies. However, running these simulations requires intensive computational resources, limiting the number of model configurations that can be explored. As a result, they struggle to keep pace with the growing volume of observed data.
-
-                In this work, we investigate the use of score-based generative machine learning models to learn the distribution of dark matter across different cosmological parameter configurations. Our approach uses a graph neural network with message-passing layers to capture meaningful topological features in dark matter halos represented as point clouds. To train the network, we add varying levels of random noise to the data and learn to predict the score, which points in the direction of increasing data density. During sampling, we begin from a uniform prior distribution that lacks structure and iteratively refine the data using Langevin Dynamics to recover the dark matter distribution.
-
-                Two notable challenges of this project are the large sizes of the point clouds and the domain-specific constraints. Since point clouds contain up to 600,000 points, directly processing them is memory demanding. To address this, we construct subgraphs that reduce the memory demand while preserving local structure of the data. Additionally, because periodic boundary conditions affect how distances and neighborhoods are computed and therefore how points move, we integrate them at every stage of the model pipeline, including k-NN computation, data perturbation, and inference, ensuring consistency with the data properties.
-
-
-            </p>
-            
-            <p></p>
-                <h2>Team :</h2>
-                <span>Gijs Vermariën - PhD Candidate on ML in Astrochemistry and Research Intern @ SURF</span><br>
-                <span>Yue Zhao - High Performance Machine Learning Advisor @ SURF </span><br>
-                <span>Podareanu - Team Lead @ SURF | Senior Consultant @ SURF B.V</span><br>
-                <span>Eric Petit - Senior Research Engineer @ Intel</span><br>
-                <span>Adel Chaibi - Computer Scientist @ Intel</span>              
-	</div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025.</p>
+        <div class="image-content">
+          <img src="../images/eridan_orion_lievre.jpg" alt="Orion and the Hare" />
+          <p class="image-description">The Orion Bar and Eridanus – symbols of cosmic origin.</p>
         </div>
-    </footer>
+      </div>
+
+      <!-- Block 2: N-body Simulations -->
+      <div class="block session">
+        <div class="text-content">
+          <p class="session-title">Machine Learning Surrogates for Cosmological N-body Simulations</p>
+          <p>The large-scale structure of the universe is shaped by the gravitational evolution of dark matter... Cosmological N-body simulations are crucial but computationally expensive, limiting exploration of model space.</p>
+
+          <p>We use score-based generative machine learning models to learn the distribution of dark matter... Our approach leverages graph neural networks with message-passing layers applied to massive point cloud data.</p>
+
+          <p>We train the model by injecting noise and learning the score function... Sampling begins from noise and is refined iteratively using Langevin Dynamics to generate realistic structures.</p>
+
+          <p>Challenges include handling massive point clouds (up to 600,000 points) and periodic boundary conditions... We mitigate this using memory-efficient subgraphs and consistency-aware model design.</p>
+        </div>
+        <div class="image-content">
+          <img src="../images/sky.jpg" alt="Sky View" />
+          <p class="image-description">The cosmic web: dark matter shaping the universe.</p>
+        </div>
+      </div>
+
+      <!-- Team Section -->
+      <h2>Team :</h2>
+      <span>Gijs Vermariën – PhD Candidate on ML in Astrochemistry and Research Intern @ SURF</span><br />
+      <span>Yue Zhao – High Performance Machine Learning Advisor @ SURF</span><br />
+      <span>Podareanu – Team Lead @ SURF | Senior Consultant @ SURF B.V</span><br />
+      <span>Eric Petit – Senior Research Engineer @ Intel</span><br />
+      <span>Adel Chaibi – Computer Scientist @ Intel</span><br />
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025.</p>
+    </div>
+  </footer>
 </body>
 </html>
